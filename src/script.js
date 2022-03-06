@@ -1,10 +1,12 @@
 // Seu código vem aqui
 function calculateSalary(salary, sales) {
+    let total = 0;
     if (sales <= 1200) {
-            return salary + (sales * 0.03);
+        total = salary + (sales * 0.03);
     } else {
-            return salary + (sales * 0.05);
+        total = salary + (1200 * 0.03) + ((sales - 1200) * 0.05);
     }
+    return total;
 }
 console.log(calculateSalary(1000, 1500));
 
